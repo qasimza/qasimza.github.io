@@ -25,6 +25,15 @@ a:hover {
 a[target="_blank"]:after {
 }
 
+.co-op {
+  color: #272829;
+}
+
+.co-op:hover {
+  color: #067ded;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
