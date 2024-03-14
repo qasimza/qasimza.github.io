@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
 import { NavLink, navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
-
+import { logo, close } from '../assets';
 
 const Navbar = () => {
 
@@ -43,13 +42,13 @@ const Navbar = () => {
           }
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img src={toggle ? close : menu }
+          <img src={ close }
                alt='menu'
-               className='w-[28px] h-[28px] object-contain cursor-pointer'
+               className={`w-[18px] h-[18px] object-contain cursor-pointer ${!toggle ? 'rotate-45' : ''} transition-all`}
                onClick={() => setToggle(!toggle)}
                />
-               <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-[140px] z-10 rounded-xl`}>
-               <ul className='list-none flex justify-end items-start flex-col gap-4'>
+               <div className={`${!toggle ? 'hidden' : 'flex'} p-6 absolute top-10 right-0 my-2 min-[140px] z-10 rounded-xl`}>
+               <ul className='list-none flex justify-end items-end flex-col gap-2'>
                 {
                   navLinks.map((link: NavLink) =>(
                   <li
@@ -58,17 +57,17 @@ const Navbar = () => {
                   active === link.title
                   ? 'text-white'
                   : 'text-secondary'}
-                  font-poppins font-medium cursor-pointer text-[16px]`}
+                  font-poppins font-medium cursor-pointer bg-black rounded-full p-2 w-32 justify-end flex`}
                   onClick={()=>{
                     setToggle(!toggle);
                     setActive(link.title);
                     }}>
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`#${link.id}`} className='flex items-center text-[16px]'>{link.title}<span className='material-symbols-outlined bg-primary p-2 rounded-full text-2xl'>{link.icon}</span></a>
                   </li>
                   ))
                 }
               </ul>
-               </div>
+            </div>
         </div>
       </div>
     </nav>
@@ -76,3 +75,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

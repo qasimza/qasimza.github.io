@@ -27,21 +27,25 @@ import {
   
   export type NavLink = {
     id: string,
-    title: string
+    title: string,
+    icon: string
   }
 
   export const navLinks: NavLink[] = [
     {
       id: "about",
       title: "About",
+      icon: "person"
     },
     {
       id: "work",
       title: "Work",
+      icon: "work_history"
     },
     {
       id: "contact",
       title: "Contact",
+      icon: "mail"
     },
   ];
   
