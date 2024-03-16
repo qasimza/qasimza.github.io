@@ -400,6 +400,19 @@ section {
   margin-bottom: 0;
 }
 
+.material-symbols-outlined {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #0563bb;
+  padding: 12px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
