@@ -10,6 +10,8 @@ export default {
         primary: "#050816",
         secondary: "#a2b5ce",
         tertiary: "#151030",
+        "blue-dark": "#2f80ed",
+        "blue-light": "#56ccf2",
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
